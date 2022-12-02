@@ -48,10 +48,10 @@ gender = map[gender]
 #%%
 # load model
 import joblib
-xgb_model = joblib.load(r'E:\Spyder_2022.3.29\output\machinel\wsn_output\gbm_model.pkl')
+xgb_model = joblib.load('gbm_model.pkl')
 gbm = xgb_model
 
-hp_train = pd.read_csv('E:/Spyder_2022.3.29/data/machinel/lwl_data/OSA/serve_osa_2.csv')
+hp_train = pd.read_csv('serve_osa_2.csv')
 # hp_train['OSAL'] = hp_train['OSAL'].apply(lambda x : +1 if x==1 else 0)
 features =["ESSL","hypertension","BQL","SBSL","drink",'smork',"snoring",'suffocate','memory','LOE','gender','age','BMI','waistline','NC']
 # target = 'OSAL'
